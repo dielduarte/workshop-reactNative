@@ -1,8 +1,11 @@
 import React from 'react';
 import {
   DrawerNavigator,
-  StackNavigator
+  StackNavigator,
+  DrawerItems
 } from 'react-navigation';
+
+import { ScrollView } from 'react-native';
 
 import HelloWorld from './pages/HelloWorld';
 import Gps from './pages/Gps';
@@ -14,18 +17,22 @@ import Request from './pages/Request';
 import AnimationsContainer from './pages/Animations/';
 import Capture from './pages/Capture';
 import CameraAccess from './pages/CameraAccess';
+import AnimatableView from './pages/Animatable';
 
 const Drawer = DrawerNavigator({
   HelloWorld: { screen: HelloWorld },
-  Gps: { screen: Gps },
   Dialogs: { screen: Dialogs },
   Stack: { screen: StackContainer },
   TabContainer: { screen: TabContainer },
   Push: { screen: Push },
   Request: { screen: Request },
   Animations: { screen: AnimationsContainer },
+  Animatable: { screen: AnimatableView },
   Capture: { screen: Capture },
-  CameraAccess: { screen: CameraAccess }
+  CameraAccess: { screen: CameraAccess },
+  Gps: { screen: Gps }
+}, {
+  contentComponent: props => <ScrollView><DrawerItems {...props} /></ScrollView>,
 });
 
 const App = StackNavigator({

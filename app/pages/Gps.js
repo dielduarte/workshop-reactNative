@@ -38,13 +38,13 @@ export default class Gps extends Component {
             region={this.state.region}
             onRegionChange={this.onRegionChange}
             style={styles.map}
-          />
-            {/* <MapView.Marker
+          >
+            <MapView.Marker
               coordinate={{ ...this.state.region }}
               title={'Minha localização'}
               description={'estou na ufmg'}
-            /> */}
-          {/* </MapView> */}
+            />
+          </MapView>
         </View>
       );
     }
