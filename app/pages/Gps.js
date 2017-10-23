@@ -13,9 +13,9 @@ export default class Gps extends Component {
     drawerLabel: 'Gps',
     title: 'GPS - MAPA',
     headerLeft:
-    <View style={{ marginLeft: 10 }}>
-      <Button title="menu" onPress={() => navigation.navigate('DrawerToggle')} />
-    </View>
+      <View style={{ marginLeft: 10 }}>
+        <Button title="menu" onPress={() => navigation.navigate('DrawerToggle')} />
+      </View>
   });
 
   constructor() {
@@ -25,18 +25,12 @@ export default class Gps extends Component {
     };
   }
 
-
-  onRegionChange(region) {
-    this.setState({ region });
-  }
-
   render() {
     if (Object.keys(this.state.region).length) {
       return (
         <View style={styles.container}>
           <MapView 
             region={this.state.region}
-            onRegionChange={this.onRegionChange}
             style={styles.map}
           >
             <MapView.Marker
@@ -59,7 +53,6 @@ export default class Gps extends Component {
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
       (region) => {
-        console.log(region);
         this.setState({
           region: {
             latitude: region.coords.latitude,
@@ -72,6 +65,25 @@ export default class Gps extends Component {
       (error) => console.log(error),
       { enableHighAccuracy: true, timeout: 10000, maximumAge: 1000 }
     );
+
+    this.watchId = navigator.geolocation.watchPosition(
+      (region) => {
+        this.setState({
+          region: {
+            latitude: region.coords.latitude,
+            longitude: region.coords.longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421
+          }
+        });
+      },
+      (error) => console.log(error),
+      { enableHighAccuracy: true, timeout: 10000, maximumAge: 1000 }
+    );
+  }
+
+  componentWillUnmount() {
+    navigator.geolocation.clearWatch(this.watchId);
   }
 }
 
