@@ -5,17 +5,11 @@ import {
   View,
   Button
 } from 'react-native';
-import FontAwesome, { Icons } from 'react-native-fontawesome';
 
 export default class TabYellow extends Component {
   static navigationOptions = ({ navigation }) => ({
     header: null,
-    tabBarLabel: 'Tab Yellow',
-    tabBarIcon: ({ tintColor }) => (
-      <FontAwesome style={{ fontSize: 32, color: tintColor }}>
-        {Icons.chevronLeft}
-      </FontAwesome>
-    )
+    tabBarLabel: 'Tab Yellow'
   });
 
   render() {

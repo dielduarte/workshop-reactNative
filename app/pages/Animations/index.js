@@ -5,20 +5,16 @@ import {
   View,
   Button
 } from 'react-native';
-
-import {
-  TabNavigator
-} from 'react-navigation';
-
-import Animated from './Animated';
+import { TabNavigator } from 'react-navigation';
 import Layout from './Layout';
 import WithoutLayout from './WithoutLayout';
+import Animated from './Animated';
 
 
 const Animations = TabNavigator({
-  Animated: { screen: Animated },
   WithoutLayout: { screen: WithoutLayout },
-  Layout: { screen: Layout }
+  Layout: { screen: Layout },
+  Animated: { screen: Animated }
 }, {
   tabBarPosition: 'bottom',
   animationEnabled: true,

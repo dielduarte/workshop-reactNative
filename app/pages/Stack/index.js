@@ -5,16 +5,11 @@ import {
   View,
   Button
 } from 'react-native';
-
-import {
-  DrawerNavigator,
-  StackNavigator
-} from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 
 import PageBlue from './PageBlue';
 import PageYellow from './PageYellow';
 import PageRed from './PageRed';
-
 
 const Stack = StackNavigator({
   PageBlue: { screen: PageBlue },

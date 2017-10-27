@@ -3,23 +3,21 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
-  UIManager,
-  LayoutAnimation
+  Button
 } from 'react-native';
 
 export default class WithoutLayout extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    header: null,
+    tabBarLabel: 'Sem Layout'
+  });
+  
   constructor() {
     super();
     this.state = {
       styleName: 'default'
     }
   }
-
-  static navigationOptions = ({ navigation }) => ({
-    header: null,
-    tabBarLabel: 'Sem Layout'
-  });
 
   changeState(styleName) {
     this.setState({ styleName });

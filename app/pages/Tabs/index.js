@@ -5,11 +5,7 @@ import {
   View,
   Button
 } from 'react-native';
-
-import {
-  TabNavigator
-} from 'react-navigation';
-
+import { TabNavigator } from 'react-navigation';
 import TabBlue from './TabBlue';
 import TabYellow from './TabYellow';
 import TabRed from './TabRed';

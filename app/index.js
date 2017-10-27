@@ -18,9 +18,11 @@ import AnimationsContainer from './pages/Animations/';
 import Capture from './pages/Capture';
 import CameraAccess from './pages/CameraAccess';
 import AnimatableView from './pages/Animatable';
+import Flexbox from './pages/Flexbox';
 
 const Drawer = DrawerNavigator({
   HelloWorld: { screen: HelloWorld },
+  Flexbox: { screen: Flexbox },
   Dialogs: { screen: Dialogs },
   Stack: { screen: StackContainer },
   TabContainer: { screen: TabContainer },

@@ -6,7 +6,6 @@ import {
   Button
 } from 'react-native';
 
-
 export default class HelloWorld extends Component {
   static navigationOptions = ({ navigation }) => ({
     drawerLabel: 'Hello World',
