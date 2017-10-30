@@ -2,6 +2,8 @@
 
 Follow the steps to learn React Native
 
+[Intro presentation](https://github.com/dielduarte/workshop-reactNative/blob/master/steps/React%20Native%20Tour%20-%20PT_BR%20-%20UFMG.pdf)
+
 1. [Step 1 - Installation and Hello World](https://github.com/dielduarte/workshop-reactNative/blob/master/steps/Step%201%20-%20installation%20and%20hello%20world.pdf)
 2. [Step 2 - Flexbox - how to make layouts in React Native](https://github.com/dielduarte/workshop-reactNative/blob/master/steps/Step%202%20-%20Flexbox%20%20-%20How%20to%20make%20layouts%20in%20React%20Native.pdf) 
 3. [Step 3 - Stack Navigator](https://github.com/dielduarte/workshop-reactNative/blob/master/steps/Step%203%20-%20Stack%20navigator.pdf)
